@@ -1,61 +1,432 @@
-
-
-
-
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Personal home of Yamonwan Justin DAH-KENANGNON, a software engineer from Benin working on identity, trust, and internet standards.">
-    <link rel="canonical" href="https://dahkenangnon.com/">
-    <title>Yamonwan Justin DAH-KENANGNON</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script data-goatcounter="https://dahkenangnon.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
-  </head>
-  <body>
+  <title>Yamonwan Justin DAH-KENANGNON — Software Engineer</title>
+  <meta
+    name="description"
+    content="Yamonwan Justin DAH-KENANGNON is a software engineer working on identity, authorization, Rust/WebAssembly, developer infrastructure, and Internet standards."
+  >
+  <meta name="author" content="Yamonwan Justin DAH-KENANGNON">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="color-scheme" content="light">
+
+  <link rel="canonical" href="https://dahkenangnon.com/">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Yamonwan Justin DAH-KENANGNON — Software Engineer">
+  <meta
+    property="og:description"
+    content="Identity, authorization, Rust/WebAssembly, developer infrastructure, and Internet standards."
+  >
+  <meta property="og:url" content="https://dahkenangnon.com/">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Yamonwan Justin DAH-KENANGNON — Software Engineer">
+  <meta
+    name="twitter:description"
+    content="Identity, authorization, Rust/WebAssembly, developer infrastructure, and Internet standards."
+  >
+
+  <style>
+    /* Keep the site's simple serif styling, always in light mode. */
+    :root {
+      color-scheme: only light;
+    }
+
+    html {
+      scroll-padding-top: calc(var(--navigation-height, 8rem) + 1rem);
+    }
+
+    body {
+      margin: 0;
+      font-size: 1.125rem;
+      line-height: 1.6;
+      overflow-wrap: anywhere;
+    }
+
+    .page {
+      width: min(70ch, calc(100% - 2rem));
+      margin-inline: auto;
+      padding-block: 2rem;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0 0 0.75rem;
+      line-height: 1.25;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+    }
+
+    p {
+      margin: 0 0 1rem;
+    }
+
+    main section {
+      margin-block-start: 3rem;
+    }
+
+    .work-item + .work-item {
+      margin-block-start: 2rem;
+    }
+
+    nav ul,
+    .inline-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      margin: 1rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .inline-links li {
+      max-width: 100%;
+    }
+
+    .inline-links a {
+      display: inline-block;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      padding-block: 0.75rem;
+      background: #ffffff;
+    }
+
+    nav ul {
+      margin: 0;
+    }
+
+    nav li {
+      white-space: nowrap;
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Yamonwan Justin DAH-KENANGNON",
+    "url": "https://dahkenangnon.com/",
+    "jobTitle": "Software Engineer",
+    "sameAs": [
+      "https://github.com/Dahkenangnon",
+      "https://www.linkedin.com/in/dahkenangnon/"
+    ]
+  }
+  </script>
+
+  <script
+    data-goatcounter="https://dahkenangnon.goatcounter.com/count"
+    async
+    src="//gc.zgo.at/count.js"
+  ></script>
+</head>
+
+<body>
+  <div class="page">
     <header>
       <h1>Yamonwan Justin DAH-KENANGNON</h1>
-      <p>
-        Software engineer from Benin, trained first in mechanics and later in
-        applied mathematics and mathematical modeling. I build software around
-        identity, trust, authentication, authorization, and internet standards.
+
+      <p class="intro">
+        Software engineer working on identity, authorization,
+        runtime engineering, developer infrastructure, and Internet standards.
       </p>
+
+      <p class="subtle">
+        I build standards-based identity software, policy-driven authorization
+        systems, and developer tooling across JavaScript, TypeScript, WebAssembly,
+        and Web APIs. I am also learning Rust as I prepare to move deeper into
+        systems programming.
+      </p>
+
     </header>
 
+    <nav aria-label="Primary navigation">
+      <ul>
+        <li><a href="#now">Now</a></li>
+        <li><a href="#work">Selected work</a></li>
+        <li><a href="#areas">Areas</a></li>
+        <li><a href="#writing">Writing</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#direction">Direction</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#elsewhere">Elsewhere</a></li>
+      </ul>
+    </nav>
+
     <main>
-      <section aria-labelledby="current-work">
-        <h2 id="current-work">Current work</h2>
+      <section id="now" aria-labelledby="now-title">
+        <p class="section-label">Now</p>
+        <h2 id="now-title">Software Engineer · Gluu</h2>
+
         <p>
-          I currently work with <a href="https://gluu.org/">Gluu</a> on
-          <a href="https://docs.jans.io/stable/cedarling/">Cedarling</a> and
-          Janssen. My focus is practical developer education and the Cedarling
-          JavaScript SDK in the public
-          <a href="https://github.com/JanssenProject/jans">Janssen source</a>.
+          I work with <a href="https://gluu.org/">Gluu</a> on
+          <a href="https://cedarling.dev/">Cedarling</a> and the
+          <a href="https://github.com/JanssenProject/jans">Janssen Project</a>.
+          My work spans JavaScript/WebAssembly integration, developer experience,
+          and practical authorization education.
+        </p>
+
+        <p>
+          I created <a href="https://cedarling.dev/">cedarling.dev</a>, work on
+          JavaScript and WebAssembly integration for Cedarling across Node.js,
+          browsers, and edge runtimes, and write practical
+          <a href="https://cedarling.dev/learn">Cedarling tutorials</a> for
+          real-world authorization use cases.
+        </p>
+
+        <ul class="inline-links" aria-label="Current work links">
+          <li><a href="https://cedarling.dev/">cedarling.dev</a></li>
+          <li><a href="https://cedarling.dev/learn">Tutorials</a></li>
+          <li><a href="https://github.com/JanssenProject/jans/tree/main/jans-cedarling">Cedarling source</a></li>
+          <li><a href="https://github.com/JanssenProject/jans">Janssen</a></li>
+          <li><a href="https://github.com/GluuFederation">Gluu on GitHub</a></li>
+        </ul>
+      </section>
+
+      <section id="work" aria-labelledby="work-title">
+        <p class="section-label">Selected work</p>
+        <h2 id="work-title">Projects and engineering work</h2>
+
+        <article class="work-item">
+          <h3><a href="https://oidfed.com/">@oidfed</a></h3>
+          <p>
+            A runtime-agnostic JavaScript and TypeScript implementation of
+            OpenID Federation 1.0, built on Web API standards and designed to
+            run across Node.js, Deno, Bun, browsers, and other compatible runtimes.
+          </p>
+          <ul class="inline-links" aria-label="@oidfed links">
+            <li><a href="https://oidfed.com/">Project</a></li>
+            <li><a href="https://github.com/Dahkenangnon/oidfed">Source</a></li>
+            <li><a href="https://explore.oidfed.com/">Explorer</a></li>
+            <li><a href="https://learn.oidfed.com/">Learn</a></li>
+            <li><a href="https://fed.oidfed.com/">Reference federation</a></li>
+          </ul>
+        </article>
+
+        <article class="work-item">
+          <h3><a href="https://cedarling.dev/">Cedarling developer experience</a></h3>
+          <p>
+            At Gluu, I work on the JavaScript and WebAssembly developer
+            experience around Cedarling, including cross-runtime integration,
+            developer tooling, cedarling.dev, and practical learning material
+            for integrating fine-grained authorization into real applications.
+          </p>
+          <ul class="inline-links" aria-label="Cedarling links">
+            <li><a href="https://cedarling.dev/">Website</a></li>
+            <li><a href="https://cedarling.dev/playground">Playground</a></li>
+            <li><a href="https://cedarling.dev/learn">Learn</a></li>
+            <li><a href="https://docs.jans.io/stable/cedarling/">Documentation</a></li>
+            <li><a href="https://github.com/JanssenProject/jans/tree/main/jans-cedarling">Source</a></li>
+          </ul>
+        </article>
+
+        <article class="work-item">
+          <h3><a href="https://parako.id/">Parako.ID</a></h3>
+          <p>
+            Open-source, self-hosted OpenID Connect and OAuth 2.0 identity
+            infrastructure for organizations that want to own and operate their
+            authentication stack.
+          </p>
+          <ul class="inline-links" aria-label="Parako.ID links">
+            <li><a href="https://parako.id/">Project</a></li>
+            <li><a href="https://docs.parako.id/">Documentation</a></li>
+            <li><a href="https://github.com/Dahkenangnon/Parako.ID">Source</a></li>
+          </ul>
+        </article>
+
+        <article class="work-item">
+          <h3><a href="https://oidc-provider.dev/">oidc-provider.dev</a></h3>
+          <p>
+            Community documentation for
+            <a href="https://github.com/panva/node-oidc-provider">panva/node-oidc-provider</a>,
+            covering practical use of the OpenID Certified OAuth 2.0 and
+            OpenID Connect authorization server for Node.js.
+          </p>
+          <p>
+            The community documentation has received more than 4,000 page views.
+          </p>
+          <ul class="inline-links" aria-label="oidc-provider.dev links">
+            <li><a href="https://oidc-provider.dev/">Documentation</a></li>
+            <li><a href="https://github.com/Dahkenangnon/oidc-provider.dev">Source</a></li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="areas" aria-labelledby="areas-title">
+        <p class="section-label">Areas</p>
+        <h2 id="areas-title">What I work on</h2>
+
+        <dl class="areas">
+          <dt>Identity</dt>
+          <dd>OAuth 2.0 · OpenID Connect · OpenID Federation · JOSE · JWT</dd>
+
+          <dt>Authorization</dt>
+          <dd>Cedar · Cedarling · fine-grained authorization · policy-based access control</dd>
+
+          <dt>Runtime engineering</dt>
+          <dd>WebAssembly · JavaScript · TypeScript · Node.js · browsers · edge runtimes</dd>
+
+          <dt>Learning next</dt>
+          <dd>Rust · systems programming · lower-level software engineering</dd>
+
+          <dt>Internet standards</dt>
+          <dd>RFCs · OpenID specifications · interoperable protocols · Web APIs</dd>
+
+          <dt>Developer experience</dt>
+          <dd>SDKs · documentation · tutorials · examples · interactive developer tooling</dd>
+        </dl>
+      </section>
+
+      <section id="writing" aria-labelledby="writing-title">
+        <p class="section-label">Writing &amp; learning</p>
+        <h2 id="writing-title">Technical material</h2>
+
+        <article class="work-item">
+          <h3><a href="https://cedarling.dev/learn">Cedarling Learn</a></h3>
+          <p>
+            Practical JavaScript authorization tutorials covering server-side
+            authorization, cross-tenant RAG protection, MCP capability control,
+            editorial publishing, and sensitive data exports.
+          </p>
+        </article>
+
+        <article class="work-item">
+          <h3><a href="https://learn.oidfed.com/">Learn OpenID Federation 1.0</a></h3>
+          <p>
+            An interactive course covering federation from first principles
+            through trust chains, metadata policy, trust marks, federation
+            endpoints, client registration, topology design, and real-world use.
+          </p>
+        </article>
+      </section>
+
+      <section id="experience" aria-labelledby="experience-title">
+        <p class="section-label">Experience</p>
+        <h2 id="experience-title">Professional work</h2>
+
+        <div class="experience">
+          <div class="experience-row">
+            <time datetime="2026">2026 — now</time>
+            <p>
+              <strong>Software Engineer · Gluu</strong><br>
+              <span class="subtle">Cedarling · Janssen · JavaScript/WebAssembly · developer experience</span>
+            </p>
+          </div>
+
+          <div class="experience-row">
+            <span class="subtle">2022 — 2023</span>
+            <p>
+              <strong>CTO / Head of Digital Transition · Selys Africa</strong>
+            </p>
+          </div>
+
+          <div class="experience-row">
+            <span class="subtle">2017 — 2026</span>
+            <p>
+              <strong>Independent software development</strong>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="direction" aria-labelledby="direction-title">
+        <p class="section-label">Direction</p>
+        <h2 id="direction-title">Learning Rust and moving toward systems programming</h2>
+
+        <p>
+          I am currently learning Rust with the goal of transitioning progressively
+          into systems programming and lower-level software engineering over the
+          coming months.
+        </p>
+
+        <p>
+          This direction grows naturally from my current work with WebAssembly,
+          cross-runtime integration, and developer infrastructure, while taking me
+          progressively closer to lower-level systems work.
         </p>
       </section>
 
-      <section aria-labelledby="projects">
-        <h2 id="projects">Projects</h2>
+      <section id="about" aria-labelledby="about-title">
+        <p class="section-label">About</p>
+        <h2 id="about-title">Mechanics → mathematics → software</h2>
+
         <p>
-          I created <a href="https://oidfed.com/"><strong>@oidfed</strong></a>,
-          a runtime-agnostic JavaScript and TypeScript implementation of OpenID
-          Federation; its
-          <a href="https://github.com/Dahkenangnon/oidfed">source is on GitHub</a>.
+          My path into software started with mechanics, followed by applied
+          mathematics and mathematical modeling. That background shaped how I
+          approach software engineering: through systems, models, constraints,
+          and precise interfaces.
         </p>
+
         <p>
-          <a href="https://oidc-provider.dev/"><strong>oidc-provider.dev</strong></a>
-          is community documentation for the node-oidc-provider project, with
-          its <a href="https://github.com/Dahkenangnon/oidc-provider.dev">source on GitHub</a>.
-        </p>
-        <p>
-          <a href="https://parako.id/"><strong>Parako.ID</strong></a> is an
-          open-source, self-hosted OpenID Connect and OAuth 2.0 identity
-          provider, with its
-          <a href="https://github.com/Dahkenangnon/Parako.ID">source on GitHub</a>.
+          Today I focus on identity, authorization, JavaScript/WebAssembly
+          interoperability, developer infrastructure, and open Internet standards,
+          while building deeper Rust and systems-programming skills for the next
+          stage of my career.
         </p>
       </section>
+
+      <section id="elsewhere" aria-labelledby="elsewhere-title">
+        <p class="section-label">Elsewhere</p>
+        <h2 id="elsewhere-title">Find my work</h2>
+
+        <p>
+          For open-source work, technical discussions, and professional
+          collaboration, you can find me on GitHub and LinkedIn.
+        </p>
+
+        <ul class="inline-links" aria-label="External profiles">
+          <li>
+            <a href="https://github.com/Dahkenangnon" rel="me">GitHub</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/dahkenangnon/" rel="me">LinkedIn</a>
+          </li>
+          <li>
+            <a href="https://oidfed.com/">@oidfed</a>
+          </li>
+          <li>
+            <a href="https://cedarling.dev/">Cedarling.dev</a>
+          </li>
+        </ul>
+      </section>
     </main>
-  </body>
+
+  </div>
+  <script>
+    // Keep section targets below the navigation, including when its links wrap.
+    const navigation = document.querySelector('nav');
+    const updateNavigationHeight = () => {
+      document.documentElement.style.setProperty(
+        '--navigation-height',
+        `${navigation.getBoundingClientRect().height}px`
+      );
+    };
+
+    updateNavigationHeight();
+    if ('ResizeObserver' in window) {
+      new ResizeObserver(updateNavigationHeight).observe(navigation);
+    } else {
+      window.addEventListener('resize', updateNavigationHeight);
+    }
+  </script>
+</body>
 </html>
