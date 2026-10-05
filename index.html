@@ -117,6 +117,26 @@
     nav li {
       white-space: nowrap;
     }
+
+    .profile-heading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.profile-heading .avatar {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-heading h1 {
+  min-width: 0;
+  margin: 0;
+}
   </style>
 
   <script type="application/ld+json">
@@ -143,7 +163,18 @@
 <body>
   <div class="page">
     <header>
-      <h1>Yamonwan Justin DAH-KENANGNON</h1>
+     <div class="profile-heading">
+  <img
+    class="avatar"
+    src="https://avatars.githubusercontent.com/u/57219141?v=4&amp;size=64"
+    alt=""
+    width="64"
+    height="64"
+    decoding="async"
+  >
+  <h1>Yamonwan Justin DAH-KENANGNON</h1>
+</div>
+
 
       <p class="intro">
         Software engineer working on identity, authorization,
