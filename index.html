@@ -10,8 +10,9 @@
     content="Yamonwan Justin DAH-KENANGNON is a software engineer working on identity, authorization, Rust/WebAssembly, developer infrastructure, and Internet standards."
   >
   <meta name="author" content="Yamonwan Justin DAH-KENANGNON">
-  <meta name="theme-color" content="#ffffff">
-  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#181818" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
 
   <link rel="canonical" href="https://dahkenangnon.com/">
 
@@ -31,9 +32,30 @@
   >
 
   <style>
-    /* Keep the site's simple serif styling, always in light mode. */
+    /* Keep the site's simple serif styling and follow the system theme. */
     :root {
-      color-scheme: only light;
+      color-scheme: light dark;
+      --page-background: #ffffff;
+      --page-text: #000000;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --page-background: #181818;
+        --page-text: #e6e6e6;
+      }
+
+      a:link {
+        color: #8ab4f8;
+      }
+
+      a:visited {
+        color: #c5a5f5;
+      }
+
+      a:active {
+        color: #ffb4ab;
+      }
     }
 
     html {
@@ -42,6 +64,8 @@
 
     body {
       margin: 0;
+      background: var(--page-background);
+      color: var(--page-text);
       font-size: 1.125rem;
       line-height: 1.6;
       overflow-wrap: anywhere;
@@ -107,7 +131,7 @@
       top: 0;
       z-index: 1;
       padding-block: 0.75rem;
-      background: #ffffff;
+      background: var(--page-background);
     }
 
     nav ul {
